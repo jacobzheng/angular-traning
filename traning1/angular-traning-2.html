@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="//cdn.bootcss.com/angular.js/1.5.0/angular.min.js"></script></head>
+<body>
+
+<div ng-app="myApp" ng-controller="MyController">
+
+    请输入一个名字：<input type="text" ng-model="person.name">
+
+    Hello <span ng-bind="person.name"></span>
+
+</div>
+
+<script>
+    var app = angular.module("myApp",[]);
+    app.controller('MyController', ['$scope', function ($scope) {
+        $scope.person = {
+            name: "World"
+        };
+    }]);
+</script>
+</body>
+</html>
